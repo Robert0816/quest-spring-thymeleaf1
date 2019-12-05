@@ -6,11 +6,17 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>Header TODO</header>
+<header>  <header th:replace="header.html :: top">
+</header>
 <section>
-    <h1>Welcome $doctorname</h1>
-    <h3>Your number is $doctornumber</h3>
+			<!--h1 th:text="${doctorname}">Hello World!</h1-->
+	<h1 th:text="|Welcome ${doctorname}!|"></h1>
+    <!--h1>Welcome $doctorname</h1-->
+	<h3 th:text="|Welcome ${doctornumber}!|"></h3>
+    <!--h3>Your number is $doctornumber</h3-->
 </section>
-<footer>Footer TODO</footer>
+</form>
+		<footer th:replace="footer.html :: top">
+</footer>
 </body>
 </html>
